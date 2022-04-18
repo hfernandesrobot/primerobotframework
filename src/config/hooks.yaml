@@ -1,0 +1,4 @@
+CONFIG:
+  BROWSER_NAME: chrome
+  IMPLICITY_WAIT: 30
+  URL: http://automationpractice.com/

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.8.0 on win32)" generated="20220413 19:52:45.004" rpa="false" schemaversion="3">
+<suite id="s1" name="Register" source="C:\Users\User\Desktop\FRAMEWORK - HSBC\tests\features\register.robot">
+<test id="s1-t1" name="Caso de Teste 04: Adicionar Cliente" line="11">
+<kw name="Abrir navegador" library="hooks" type="SETUP">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>${CONFIG.IMPLICITY_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220413 19:52:49.011" endtime="20220413 19:52:49.012"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${CONFIG.BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220413 19:52:49.013" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220413 19:52:49.012" endtime="20220413 19:52:50.359"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CONFIG.URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220413 19:52:50.361" level="INFO">Opening url 'http://automationpractice.com/'</msg>
+<status status="PASS" starttime="20220413 19:52:50.359" endtime="20220413 19:52:55.782"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220413 19:52:55.782" endtime="20220413 19:52:55.791"/>
+</kw>
+<status status="PASS" starttime="20220413 19:52:49.011" endtime="20220413 19:52:55.791"/>
+</kw>
+<kw name="Acessar a página home do site" library="kws_register">
+<kw name="Acessar a página home do site Automation Practice" library="kws_search">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${HOME_PAGE.title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220413 19:52:55.802" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20220413 19:52:55.794" endtime="20220413 19:52:55.802"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME_PAGE.input_busca}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220413 19:52:55.803" endtime="20220413 19:52:55.845"/>
+</kw>
+<status status="PASS" starttime="20220413 19:52:55.793" endtime="20220413 19:52:55.845"/>
+</kw>
+<status status="PASS" starttime="20220413 19:52:55.792" endtime="20220413 19:52:55.845"/>
+</kw>
+<kw name="Clicar em &quot;Sign in&quot;" library="kws_register" sourcename="Clicar em &quot;${BUTTON}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), '${BUTTON}')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220413 19:52:55.847" endtime="20220413 19:52:55.884"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), '${BUTTON}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220413 19:52:55.885" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Sign in')]'.</msg>
+<status status="PASS" starttime="20220413 19:52:55.884" endtime="20220413 19:52:58.577"/>
+</kw>
+<status status="PASS" starttime="20220413 19:52:55.846" endtime="20220413 19:52:58.578"/>
+</kw>
+<kw name="Informar um e-mail válido" library="kws_register">
+<kw name="Free Email" library="FakerLibrary">
+<var>${FAKE_EMAIL}</var>
+<msg timestamp="20220413 19:52:58.579" level="INFO">${FAKE_EMAIL} = gina67@gmail.com</msg>
+<status status="PASS" starttime="20220413 19:52:58.579" endtime="20220413 19:52:58.579"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>email_create</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220413 19:52:58.580" endtime="20220413 19:52:58.607"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email_create</arg>
+<arg>${FAKE_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220413 19:52:58.608" level="INFO">Typing text 'gina67@gmail.com' into text field 'email_create'.</msg>
+<status status="PASS" starttime="20220413 19:52:58.608" endtime="20220413 19:52:58.746"/>
+</kw>
+<status status="PASS" starttime="20220413 19:52:58.578" endtime="20220413 19:52:58.746"/>
+</kw>
+<kw name="Clicar em Create an account" library="kws_register">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=SubmitCreate</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220413 19:52:58.749" endtime="20220413 19:52:58.788"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=SubmitCreate</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220413 19:52:58.789" level="INFO">Clicking element 'id=SubmitCreate'.</msg>
+<status status="PASS" starttime="20220413 19:52:58.788" endtime="20220413 19:52:58.862"/>
+</kw>
+<status status="PASS" starttime="20220413 19:52:58.748" endtime="20220413 19:52:58.862"/>
+</kw>
+<kw name="Preencher os dados obrigatórios" library="kws_register">
+<kw name="Name" library="FakerLibrary">
+<var>${FAKE_NAME}</var>
+<doc>:example 'John Doe'</doc>
+<msg timestamp="20220413 19:52:58.864" level="INFO">${FAKE_NAME} = Tiffany Burgess</msg>
+<status status="PASS" starttime="20220413 19:52:58.864" endtime="20220413 19:52:58.864"/>
+</kw>
+<kw name="Last Name" library="FakerLibrary">
+<var>${FAKE_LASTNAME}</var>
+<msg timestamp="20220413 19:52:58.865" level="INFO">${FAKE_LASTNAME} = Clark</msg>
+<status status="PASS" starttime="20220413 19:52:58.865" endtime="20220413 19:52:58.865"/>
+</kw>
+<kw name="Street Address" library="FakerLibrary">
+<var>${FAKE_ADDRESS}</var>
+<doc>:example: '791 Crist Parks'</doc>
+<msg timestamp="20220413 19:52:58.866" level="INFO">${FAKE_ADDRESS} = 51824 Mark Brook Apt. 575</msg>
+<status status="PASS" starttime="20220413 19:52:58.865" endtime="20220413 19:52:58.866"/>
+</kw>
+<kw name="Company" library="FakerLibrary">
+<var>${FAKE_COMPANY}</var>
+<doc>:example: 'Acme Ltd'</doc>
+<msg timestamp="20220413 19:52:58.866" level="INFO">${FAKE_COMPANY} = Frazier Group</msg>
+<status status="PASS" starttime="20220413 19:52:58.866" endtime="20220413 19:52:58.866"/>
+</kw>
+<kw name="City" library="FakerLibrary">
+<var>${FAKE_CITY}</var>
+<doc>:example: 'Sashabury'</doc>
+<msg timestamp="20220413 19:52:58.867" level="INFO">${FAKE_CITY} = East Valerieburgh</msg>
+<status status="PASS" starttime="20220413 19:52:58.867" endtime="20220413 19:52:58.867"/>
+</kw>
+<kw name="State" library="FakerLibrary">
+<var>${FAKE_STATE}</var>
+<msg timestamp="20220413 19:52:58.867" level="INFO">${FAKE_STATE} = South Carolina</msg>
+<status status="PASS" starttime="20220413 19:52:58.867" endtime="20220413 19:52:58.867"/>
+</kw>
+<kw name="Postcode" library="FakerLibrary">
+<var>${FAKE_POSTCODE}</var>
+<doc>:example: 86039-9874</doc>
+<msg timestamp="20220413 19:52:58.868" level="INFO">${FAKE_POSTCODE} = 60407</msg>
+<status status="PASS" starttime="20220413 19:52:58.867" endtime="20220413 19:52:58.868"/>
+</kw>
+<kw name="Phone Number" library="FakerLibrary">
+<var>${FAKE_PHONE}</var>
+<msg timestamp="20220413 19:52:58.868" level="INFO">${FAKE_PHONE} = 7573489174</msg>
+<status status="PASS" starttime="20220413 19:52:58.868" endtime="20220413 19:52:58.868"/>
+</kw>
+<kw name="User Name" library="FakerLibrary">
+<var>${FAKE_ALIAS}</var>
+<msg timestamp="20220413 19:52:58.869" level="INFO">${FAKE_ALIAS} = woodscaleb</msg>
+<status status="PASS" starttime="20220413 19:52:58.868" endtime="20220413 19:52:58.869"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${REGISTER.form_register}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220413 19:52:58.869" endtime="20220413 19:53:00.841"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${REGISTER.check_mr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220413 19:53:00.844" level="INFO">Clicking element 'uniform-id_gender1'.</msg>
+<status status="PASS" starttime="20220413 19:53:00.841" endtime="20220413 19:53:01.505"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.first_name}</arg>
+<arg>${FAKE_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220413 19:53:01.507" level="INFO">Typing text 'Tiffany Burgess' into text field 'customer_firstname'.</msg>
+<status status="PASS" starttime="20220413 19:53:01.506" endtime="20220413 19:53:01.688"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.last_name}</arg>
+<arg>${FAKE_LASTNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220413 19:53:01.689" level="INFO">Typing text 'Clark' into text field 'customer_lastname'.</msg>
+<status status="PASS" starttime="20220413 19:53:01.688" endtime="20220413 19:53:01.848"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.password}</arg>
+<arg>${CADASTRO.SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220413 19:53:01.850" level="INFO">Typing text '123456789' into text field 'passwd'.</msg>
+<status status="PASS" starttime="20220413 19:53:01.848" endtime="20220413 19:53:02.010"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${REGISTER.select_days}</arg>
+<arg>${CADASTRO.DIA}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220413 19:53:02.012" level="INFO">Selecting options from selection list 'days' by value 12.</msg>
+<status status="PASS" starttime="20220413 19:53:02.011" endtime="20220413 19:53:02.134"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${REGISTER.select_months}</arg>
+<arg>${CADASTRO.MES}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220413 19:53:02.137" level="INFO">Selecting options from selection list 'months' by value 3.</msg>
+<status status="PASS" starttime="20220413 19:53:02.135" endtime="20220413 19:53:02.255"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${REGISTER.select_year}</arg>
+<arg>${CADASTRO.ANO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220413 19:53:02.258" level="INFO">Selecting options from selection list 'years' by value 1994.</msg>
+<status status="PASS" starttime="20220413 19:53:02.255" endtime="20220413 19:53:02.372"/>
+</kw>
+<kw name="Debug" library="DebugLibrary">
+<doc>Open a interactive shell, run any RobotFramework keywords.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.company}</arg>
+<arg>${FAKE_COMPANY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220413 19:53:57.398" level="INFO">Typing text 'Frazier Group' into text field 'company'.</msg>
+<status status="PASS" starttime="20220413 19:53:57.397" endtime="20220413 19:53:57.518"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.address1}</arg>
+<arg>${FAKE_ADDRESS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220413 19:54:10.161" level="INFO">Typing text '51824 Mark Brook Apt. 575' into text field 'address1'.</msg>
+<status status="PASS" starttime="20220413 19:54:10.159" endtime="20220413 19:54:10.290"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.city}</arg>
+<arg>${FAKE_CITY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220413 19:54:19.320" level="INFO">Typing text 'East Valerieburgh' into text field 'city'.</msg>
+<status status="PASS" starttime="20220413 19:54:19.319" endtime="20220413 19:54:19.454"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${REGISTER.state}</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220413 19:54:34.832" level="INFO">Selecting options from selection list 'id_state' by value 3.</msg>
+<status status="PASS" starttime="20220413 19:54:34.831" endtime="20220413 19:54:34.918"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.postcode}</arg>
+<arg>${FAKE_POSTCODE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220413 19:54:49.871" level="INFO">Typing text '60407' into text field 'postcode'.</msg>
+<status status="PASS" starttime="20220413 19:54:49.870" endtime="20220413 19:54:50.001"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.mobile}</arg>
+<arg>+5511959966645</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220413 19:55:06.954" level="INFO">Typing text '+5511959966645' into text field 'phone_mobile'.</msg>
+<status status="PASS" starttime="20220413 19:55:06.953" endtime="20220413 19:55:07.082"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.alias}</arg>
+<arg>${FAKE_ALIAS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220413 19:55:18.474" level="INFO">Typing text 'woodscaleb' into text field 'alias'.</msg>
+<status status="PASS" starttime="20220413 19:55:18.472" endtime="20220413 19:55:18.588"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${REGISTER.btn_register}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220413 19:55:26.449" level="INFO">Clicking element 'submitAccount'.</msg>
+<status status="PASS" starttime="20220413 19:55:26.448" endtime="20220413 19:55:28.017"/>
+</kw>
+<status status="PASS" starttime="20220413 19:53:02.372" endtime="20220413 19:56:43.758"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.company}</arg>
+<arg>${FAKE_COMPANY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220413 19:56:43.760" level="INFO">Typing text 'Frazier Group' into text field 'company'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220413 19:57:05.883" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=100.0.4896.75)
+</msg>
+<status status="FAIL" starttime="20220413 19:57:05.872" endtime="20220413 19:57:05.891"/>
+</kw>
+<msg timestamp="20220413 19:57:05.891" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=100.0.4896.75)
+</msg>
+<msg timestamp="20220413 19:57:05.908" level="FAIL">Element with locator 'company' not found.</msg>
+<status status="FAIL" starttime="20220413 19:56:43.758" endtime="20220413 19:57:05.910"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.address1}</arg>
+<arg>${FAKE_ADDRESS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220413 19:57:05.911" endtime="20220413 19:57:05.911"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.city}</arg>
+<arg>${FAKE_CITY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220413 19:57:05.912" endtime="20220413 19:57:05.912"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${REGISTER.state}</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20220413 19:57:05.913" endtime="20220413 19:57:05.914"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.postcode}</arg>
+<arg>${FAKE_POSTCODE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220413 19:57:05.918" endtime="20220413 19:57:05.918"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.mobile}</arg>
+<arg>+5511959966645</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220413 19:57:05.919" endtime="20220413 19:57:05.919"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.alias}</arg>
+<arg>${FAKE_ALIAS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220413 19:57:05.920" endtime="20220413 19:57:05.921"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220413 19:57:05.921" endtime="20220413 19:57:05.922"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${REGISTER.btn_register}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220413 19:57:05.923" endtime="20220413 19:57:05.923"/>
+</kw>
+<status status="FAIL" starttime="20220413 19:52:58.863" endtime="20220413 19:57:05.927"/>
+</kw>
+<kw name="Submeter cadastro" library="kws_register">
+<status status="NOT RUN" starttime="20220413 19:57:05.930" endtime="20220413 19:57:05.931"/>
+</kw>
+<kw name="Conferir se o cadastro foi efetuado com sucesso" library="kws_register">
+<status status="NOT RUN" starttime="20220413 19:57:05.935" endtime="20220413 19:57:05.936"/>
+</kw>
+<kw name="Fechar navegador" library="hooks" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220413 19:57:05.969" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=100.0.4896.75)
+</msg>
+<status status="FAIL" starttime="20220413 19:57:05.955" endtime="20220413 19:57:05.972"/>
+</kw>
+<msg timestamp="20220413 19:57:05.973" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=100.0.4896.75)
+</msg>
+<msg timestamp="20220413 19:57:05.978" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=100.0.4896.75)
+</msg>
+<status status="FAIL" starttime="20220413 19:57:05.947" endtime="20220413 19:57:05.980"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220413 19:57:05.981" endtime="20220413 19:57:08.235"/>
+</kw>
+<status status="FAIL" starttime="20220413 19:57:05.942" endtime="20220413 19:57:08.235">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=100.0.4896.75)
+</status>
+</kw>
+<status status="FAIL" starttime="20220413 19:52:49.010" endtime="20220413 19:57:08.236">Element with locator 'company' not found.
+
+Also teardown failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=100.0.4896.75)
+</status>
+</test>
+<doc>Aqui neste arquivo estarão presentes todos os testes
+Web automatizados com suas Keywords referentes ao cadastro</doc>
+<status status="FAIL" starttime="20220413 19:52:45.006" endtime="20220413 19:57:08.238"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Register">Register</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220413 19:57:05.891" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=100.0.4896.75)
+</msg>
+<msg timestamp="20220413 19:57:05.973" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=100.0.4896.75)
+</msg>
+<msg timestamp="20220413 19:57:08.241" level="WARN">Run `Eyes Get All Test Results` keyword in `Suite Teardown` explicitly to see all output logs</msg>
+</errors>
+</robot>

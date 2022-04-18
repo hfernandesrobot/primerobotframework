@@ -1,0 +1,7 @@
+robotframework-seleniumlibrary
+robotframework-debuglibrary
+robotframework-faker
+robotframework-pabot
+pyyaml
+robotframework==3.2.2
+robotframework-eyeslibrary==2.1
