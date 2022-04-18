@@ -14,6 +14,7 @@ Library        EyesLibrary         web        applitools.yaml
 ########################################################
 Resource       ../auto/keywords/kws_search.robot
 Resource       ../auto/keywords/kws_register.robot
+Resource       ../auto/keywords/kws_login.robot
 
 ########################################################
 #                        Pages                         #
