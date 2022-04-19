@@ -17,3 +17,8 @@ Fechar navegador
     Capture Page Screenshot
     #Eyes Close Async
     Close Browser
+
+Conectar a minha API
+    Create Session        fakeAPI                         https://fakerestapi.azurewebsites.net/api/v1/        disable_warnings=${True}
+    ${HEADERS}            Create Dictionary               content-type=application/json
+    Set Suite Variable    ${HEADERS}

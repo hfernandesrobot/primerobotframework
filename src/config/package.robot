@@ -8,6 +8,7 @@ Library        SeleniumLibrary
 Library        DebugLibrary
 Library        FakerLibrary
 Library        EyesLibrary         web        applitools.yaml
+Library        RequestsLibrary
 
 ########################################################
 #                       Keywords                       #
@@ -15,6 +16,7 @@ Library        EyesLibrary         web        applitools.yaml
 Resource       ../auto/keywords/kws_search.robot
 Resource       ../auto/keywords/kws_register.robot
 Resource       ../auto/keywords/kws_login.robot
+Resource       ../auto/keywords/kws_api_books.robot
 
 ########################################################
 #                        Pages                         #
